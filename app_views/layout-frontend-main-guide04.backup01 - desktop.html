@@ -85,22 +85,8 @@ https://magic.reactjs.net/htmltojsx.htm
                         (904) 704-9877
                     </a>
                     
-                    
-                    <a onclick="elementShowHideToggle('navMenu');" 
-                      title="Mobile Menu" 
-                      class="ss-frontend-mobile-layout-header-nav-menu d-lg-none">
-                          <i class="fa fa-bars"></i>
-                    </a>
-                    <nav id="navMenu" class="ss-frontend-layout-header-nav d-none d-lg-block d-xl-block">
+                    <nav id="navMenu" class="ss-frontend-layout-header-nav">
                         <ul class="ss-frontend-links-ul01">
-                            <li class="ss-frontend-links-li01 d-lg-none">
-                              <a id="navLinkClose" 
-                                onclick="elementShowHideToggle('navMenu');" 
-                                title="Close Menu" 
-                                class="ss-frontend-link01">
-                                  X Close
-                              </a>
-                            </li>
                             <li class="ss-frontend-links-li01">
                                 <a id="navLinkHome" 
                                     href="#" 
@@ -163,13 +149,13 @@ https://magic.reactjs.net/htmltojsx.htm
             </header>
             
             <!--Banner-->
-            <div class="ss-frontend-banners-container">
+            <div class="ss-frontend-banners-container" style="display: none;">
                 <div class="ss-frontend-banners-container-element">
                     <img src="../app_files_layout/layout-desktop-banner-img1.png" alt="Element" />
                 </div>
               
             </div>
-            <div class="ss-frontend-banners-footer">
+            <div class="ss-frontend-banners-footer" style="display: none;">
                 <span>
                     EVERYWHERE
                 </span>
@@ -182,7 +168,7 @@ https://magic.reactjs.net/htmltojsx.htm
             </div>
 
             <!--1 column layout-->
-            <main id="layoutMain" class="ss-frontend-layout-main01">
+            <main id="layoutMain" class="ss-frontend-layout-main01" style="display: none;">
                 <div>
                     <!--Home.-->
                     <h1 class="ss-frontend-heading01 ss-frontend-heading01-layout">
@@ -196,7 +182,7 @@ https://magic.reactjs.net/htmltojsx.htm
                         no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
                         
                           <a href="#" 
-                            class="ss-frontend-btn-base ss-frontend-btn-action ss-frontend-btn-register">
+                            class="ss-frontend-btn-base ss-frontend-btn-action" style="display: block; width: 380px; margin: auto;">
                             Click to Begin Your Register
                           </a>
                     </section>
@@ -243,8 +229,144 @@ https://magic.reactjs.net/htmltojsx.htm
                         
                         <div class="ss-frontend-categories-listing-container">
                             <article class="ss-frontend-categories-container" 
-                              style="--categoriesListingDesktopContainerBG: url(../app_files_layout/layout-desktop-categories-container-bg1.png); --categoriesListingMobileContainerBG: url(../app_files_layout/layout-mobile-categories-container-bg1.png);">
-                                <a href="#" class="ss-frontend-categories-listing-image01" style="--ssFrontendCategoriesListingImageGB: url();">
+                              style="--categoriesListingDesktopContainerBG: url(../app_files_layout/layout-desktop-categories-container-bg1.png);">
+                                <a href="#" class="ss-frontend-categories-listing-image01">
+                                    img
+                                </a>
+                                <h3 class="ss-frontend-categories-listing-title01">
+                                    <a href="#" class="ss-frontend-categories-listing-title-link01">
+                                        Category Name
+                                    </a>
+                                </h3>
+                                <p class="ss-frontend-categories-listing-text01">
+                                    no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
+                                </p>
+                            </article>
+                            
+                            <article class="ss-frontend-categories-container" 
+                              style="--categoriesListingDesktopContainerBG: url(../app_files_layout/layout-desktop-categories-container-bg2.png);">
+                                <a href="#" class="ss-frontend-categories-listing-image01">
+                                    img
+                                </a>
+                                <h3 class="ss-frontend-categories-listing-title01">
+                                    <a href="#" class="ss-frontend-categories-listing-title-link01">
+                                        Category Name
+                                    </a>
+                                </h3>
+                                <p class="ss-frontend-categories-listing-text01">
+                                    no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
+                                </p>
+                            </article>
+                            
+                            
+                            <article class="ss-frontend-categories-container" 
+                              style="--categoriesListingDesktopContainerBG: url(../app_files_layout/layout-desktop-categories-container-bg1.png);">
+                                <a href="#" class="ss-frontend-categories-listing-image01">
+                                    img
+                                </a>
+                                <h3 class="ss-frontend-categories-listing-title01">
+                                    <a href="#" class="ss-frontend-categories-listing-title-link01">
+                                        Category Name
+                                    </a>
+                                </h3>
+                                <p class="ss-frontend-categories-listing-text01">
+                                    no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
+                                </p>
+                            </article>
+                            
+                            <article class="ss-frontend-categories-container" 
+                              style="--categoriesListingDesktopContainerBG: url(../app_files_layout/layout-desktop-categories-container-bg1.png);">
+                                <a href="#" class="ss-frontend-categories-listing-image01">
+                                    img
+                                </a>
+                                <h3 class="ss-frontend-categories-listing-title01">
+                                    <a href="#" class="ss-frontend-categories-listing-title-link01">
+                                        Category Name
+                                    </a>
+                                </h3>
+                                <p class="ss-frontend-categories-listing-text01">
+                                    no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
+                                </p>
+                            </article>
+
+                            <article class="ss-frontend-categories-container" 
+                              style="--categoriesListingDesktopContainerBG: url(../app_files_layout/layout-desktop-categories-container-bg1.png);">
+                                <a href="#" class="ss-frontend-categories-listing-image01">
+                                    img
+                                </a>
+                                <h3 class="ss-frontend-categories-listing-title01">
+                                    <a href="#" class="ss-frontend-categories-listing-title-link01">
+                                        Category Name
+                                    </a>
+                                </h3>
+                                <p class="ss-frontend-categories-listing-text01">
+                                    no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
+                                </p>
+                            </article>
+                            
+                            <article class="ss-frontend-categories-container" 
+                              style="--categoriesListingDesktopContainerBG: url(../app_files_layout/layout-desktop-categories-container-bg1.png);">
+                                <a href="#" class="ss-frontend-categories-listing-image01">
+                                    img
+                                </a>
+                                <h3 class="ss-frontend-categories-listing-title01">
+                                    <a href="#" class="ss-frontend-categories-listing-title-link01">
+                                        Category Name
+                                    </a>
+                                </h3>
+                                <p class="ss-frontend-categories-listing-text01">
+                                    no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
+                                </p>
+                            </article>
+
+                            <article class="ss-frontend-categories-container" 
+                              style="--categoriesListingDesktopContainerBG: url(../app_files_layout/layout-desktop-categories-container-bg1.png);">
+                                <a href="#" class="ss-frontend-categories-listing-image01">
+                                    img
+                                </a>
+                                <h3 class="ss-frontend-categories-listing-title01">
+                                    <a href="#" class="ss-frontend-categories-listing-title-link01">
+                                        Category Name
+                                    </a>
+                                </h3>
+                                <p class="ss-frontend-categories-listing-text01">
+                                    no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
+                                </p>
+                            </article>
+                            
+                            <article class="ss-frontend-categories-container" 
+                              style="--categoriesListingDesktopContainerBG: url(../app_files_layout/layout-desktop-categories-container-bg1.png);">
+                                <a href="#" class="ss-frontend-categories-listing-image01">
+                                    img
+                                </a>
+                                <h3 class="ss-frontend-categories-listing-title01">
+                                    <a href="#" class="ss-frontend-categories-listing-title-link01">
+                                        Category Name
+                                    </a>
+                                </h3>
+                                <p class="ss-frontend-categories-listing-text01">
+                                    no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
+                                </p>
+                            </article>
+                            
+                            <article class="ss-frontend-categories-container" 
+                              style="--categoriesListingDesktopContainerBG: url(../app_files_layout/layout-desktop-categories-container-bg1.png);">
+                                <a href="#" class="ss-frontend-categories-listing-image01">
+                                    img
+                                </a>
+                                <h3 class="ss-frontend-categories-listing-title01">
+                                    <a href="#" class="ss-frontend-categories-listing-title-link01">
+                                        Category Name
+                                    </a>
+                                </h3>
+                                <p class="ss-frontend-categories-listing-text01">
+                                    no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
+                                </p>
+                            </article>
+                            
+                            <article class="ss-frontend-categories-container" 
+                              style="--categoriesListingDesktopContainerBG: url(../app_files_layout/layout-desktop-categories-container-bg1.png);">
+                                <a href="#" class="ss-frontend-categories-listing-image01">
                                     img
                                 </a>
                                 <h3 class="ss-frontend-categories-listing-title01">
@@ -300,7 +422,7 @@ https://magic.reactjs.net/htmltojsx.htm
                     
                     
                     <!--Instagram.-->
-                    <section class="ss-frontend-layout-section-full-width01" style="background-color: #000000; margin-bottom: 0px;">
+                    <section class="ss-frontend-layout-section-full-width01" style="background-color: #000000;">
                       <div>
                         <img src="../app_files_layout/layout-desktop-section-full-width-bg2.png" alt="Element" />
                         <h2 class="ss-frontend-heading02 ss-frontend-heading02-layout">
@@ -323,7 +445,7 @@ https://magic.reactjs.net/htmltojsx.htm
             </main>
 
             <!--Footer.-->
-            <footer class="ss-frontend-layout-footer01 ss-frontend-text-contact01">
+            <footer class="ss-frontend-layout-footer01 ss-frontend-text-contact01" style="display: none;">
                 <div>
                     <!--Site map.-->
                     <nav class="ss-frontend-layout-footer-nav-layout">
@@ -407,7 +529,7 @@ https://magic.reactjs.net/htmltojsx.htm
                     
                     
                     <!--Social Media.-->
-                    <address class="ss-frontend-social-media-layout-footer">
+                    <address class="ss-frontend-social-media-layout-footer ss-frontend-text-contact01">
                       <h4>
                         Social Media
                       </h4>
@@ -431,7 +553,6 @@ https://magic.reactjs.net/htmltojsx.htm
                               <i class="fab fa-instagram"></i>
                           </a>
                       </div>
-                      <img src="../app_files_layout/layout-mobile-footer-payments1.png" alt="Payments" class="d-lg-none" />
                     </address>
                     
                     
@@ -457,18 +578,13 @@ https://magic.reactjs.net/htmltojsx.htm
                             class="ss-frontend-footer-links01">
                             contact@brigadeirojiujitsu.com
                         </a>
-                        <img src="../app_files_layout/layout-desktop-footer-payments1.png" alt="Payments" class="d-none d-lg-block d-xl-block" />
+                        <img src="../app_files_layout/layout-desktop-footer-payments1.png" alt="Payments" />
                     </div>
                     
                     
                     <!--Credits.-->
-                    <small class=" ss-frontend-credit-layout">
-                        <span class="ss-frontend-copyright">
-                          Credits
-                        </span>
-                        <a href="#" class="ss-frontend-credit">
-                          dev
-                        </a>
+                    <small class="ss-frontend-copyright ss-frontend-credit-layout">
+                        Credits
                     </small>
                 </div>
             </footer>
