@@ -490,20 +490,6 @@ https://magic.reactjs.net/htmltojsx.htm
               FunctionsSyncSystem.elementShowByPosition('btnTopFixed', 'top', '50');
 
 
-              // Header sticky logic.
-              let elementHeader = document.getElementById("layoutHeader");
-              let elementMain = document.getElementById("layoutMain");
-              let scrollValueRef = elementHeader.offsetHeight;
-
-              if (window.pageYOffset > scrollValueRef) {
-                  elementHeader.classList.add('ss-frontend-layout-header-stiky'); // add sticky css
-                  elementMain.style.marginTop = scrollValueRef + 'px'; // adjust the margin of the content element to the height of the header
-              } else {
-                  elementHeader.classList.remove('ss-frontend-layout-header-stiky');
-                  elementMain.style.marginTop = '0px';
-              }
-
-
               // Debug.
               // console.log('elementHeader', elementHeader);
               // console.log('scrollValueRef', scrollValueRef);
