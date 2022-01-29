@@ -40,8 +40,6 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from) {
         to[j] = from[i];
     return to;
 };
-exports.__esModule = true;
-exports.FunctionsSyncSystem = void 0;
 //  Import Node Modules.
 // ----------------------
 // require("dotenv").config(); // Load the dotenv dependency and call the config method on the imported object.
@@ -51,7 +49,6 @@ exports.FunctionsSyncSystem = void 0;
 // ----------------------
 var configDebug = true;
 var FunctionsSyncSystem = {};
-exports.FunctionsSyncSystem = FunctionsSyncSystem;
 // var importOrigin = document.currentScript.getAttribute("importOrigin");
 //  ----------------------
 // Function to reorder the rowns on a input table or other elements.
