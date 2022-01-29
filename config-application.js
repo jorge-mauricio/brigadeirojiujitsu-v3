@@ -783,7 +783,7 @@ gSystemConfig.enableContentURL = 0; // 0 - disable | 1 - enable
 // gSystemConfig.enableContentCaption = 1; // 0 - disable | 1 - enable
 gSystemConfig.enableContentFileThumbnail = 0; // 0 - disable | 1 - enable
 gSystemConfig.enableContentColumns = 0; // 0 - disable | 1 - enable
-gSystemConfig.enableContentImageNoResize = 0; // 0 - disable | 1 - enable
+gSystemConfig.enableContentImageNoResize = 1; // 0 - disable | 1 - enable
 
 gSystemConfig.enableContentHTML = 1; // 0 - disable | 1 - enable
 gSystemConfig.enableContentVideos = 0; // 0 - disable | 1 - enable
@@ -1953,8 +1953,8 @@ gSystemConfig.configFormsBindRegisterUserIDReference = 3892; // category ID / re
 gSystemConfig.configFormsBindRegisterUserSort = 'name'; // options: name | name_first | name_last | name_company | date_register esc | date_register desc | sort_order
 
 gSystemConfig.enableFormsRecipientEmailCopy = 0; // 0 - disable | 1 - enable
-gSystemConfig.enableFormsSender = 1; // 0 - disable | 1 - enable
-gSystemConfig.enableFormsSenderConfig = 1; // 0 - disable | 1 - enable
+gSystemConfig.enableFormsSender = 0; // 0 - disable | 1 - enable
+gSystemConfig.enableFormsSenderConfig = 0; // 0 - disable | 1 - enable
 gSystemConfig.enableFormsEmailFormat = 0; // 0 - disable | 1 - enable
 gSystemConfig.enableFormsMessageSuccess = 1; // 0 - disable | 1 - enable
 gSystemConfig.enableFormsNotes = 0; // 0 - disable | 1 - enable

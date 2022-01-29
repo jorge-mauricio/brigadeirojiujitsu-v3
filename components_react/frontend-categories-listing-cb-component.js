@@ -548,8 +548,8 @@ class FrontendCategoriesListing extends Component {
     // FunctionsSyncSystem.elementMessage01("titleCurrent", "Example of current title");
     // elementMessage01("titleCurrent", this.titleCurrent); // working
     // console.log("FunctionsSyncSystem=", FunctionsSyncSystem);
-    FunctionsSyncSystem.elementMessage01('titleCurrent', this.titleCurrent);
-    FunctionsSyncSystem.elementMessage01('titleCurrentMobile', this.titleCurrent);
+    // FunctionsSyncSystem.elementMessage01('titleCurrent', this.titleCurrent);
+    // FunctionsSyncSystem.elementMessage01('titleCurrentMobile', this.titleCurrent);
   }
   // **************************************************************************************
 
@@ -599,6 +599,9 @@ class FrontendCategoriesListing extends Component {
 
     return (
       <React.Fragment>
+        <h1 className="ss-frontend-heading01 ss-frontend-heading01-layout">
+          {this.titleCurrent}
+        </h1>
         <section className="ss-frontend-layout-section-content01">
           {/* Categories records. */}
           <FrontendCategoriesListingRecord arrCategoriesListing={this.state.arrCategoriesListing} configLayoutType={2}>
@@ -816,9 +819,6 @@ class FrontendCategoriesListing extends Component {
               </li>
             </ul>
           </div>
-          <div style={{ position: 'relative', display: 'block', overflow: 'hidden', textAlign: 'center', margin: '20px 0px 0px 0px' }}>
-            <button>Back</button>
-          </div>
           {/* Debug. */}
           {/* "this.objCategoriesListing=" + this.objCategoriesListing*/}
           {/* "this.state.objCategoriesListing=" + JSON.stringify(this.state.objCategoriesListing)*/}
@@ -841,9 +841,6 @@ class FrontendCategoriesListing extends Component {
                         }
                     )*/
           /* working */}
-          Single component
-          {/* onClick={this.elementMessage01("titleCurrent", "current title example")} */}
-          <button onClick={/* elementMessage01("titleCurrent", "current title example")*/ +''}>Click me</button>
         </section>
       </React.Fragment>
     );

@@ -139,34 +139,10 @@ class FrontendBannersRecord extends Component {
         {configLayoutType === 22 ? (
           <React.Fragment>
             {/* Desktop. */}
-            <div className="d-none d-lg-block" style={{ position: 'relative', display: 'block', width: '100%', height: '525px;', overflow: 'hidden' }}>
-              <div id="bannersSlideshowBootstrap22" className="carousel slide carousel-fade" data-ride="carousel">
-                <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <div style={{ position: 'relative', display: 'block', width: '100%', height: '525px', backgroundImage: 'url(/files-layout/layout-frontend-home-banner1.jpg)', backgroundPosition: 'center center' }}></div>
-                  </div>
-                  <div className="carousel-item">
-                    <div style={{ position: 'relative', display: 'block', width: '100%', height: '525px', backgroundImage: 'url(/files-layout/layout-frontend-home-banner2.jpg)', backgroundPosition: 'center center' }}></div>
-                  </div>
-                  <div className="carousel-item">
-                    <div style={{ position: 'relative', display: 'block', width: '100%', height: '525px', backgroundImage: 'url(/files-layout/layout-frontend-home-banner3.jpg)', backgroundPosition: 'center center' }}></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Mobile. */}
-            <div className="d-lg-none" style={{ position: 'relative', display: 'block', width: '100%', height: '275px;', overflow: 'hidden' }}>
-              <div id="bannersSlideshowBootstrap22" className="carousel slide carousel-fade" data-ride="carousel">
-                <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <div style={{ position: 'relative', display: 'block', width: '100%', height: '275px', backgroundImage: 'url(/files-layout/layout-frontend-mobile-home-banner1.jpg)', backgroundPosition: 'center center' }}></div>
-                  </div>
-                  <div className="carousel-item">
-                    <div style={{ position: 'relative', display: 'block', width: '100%', height: '275px', backgroundImage: 'url(/files-layout/layout-frontend-mobile-home-banner2.jpg)', backgroundPosition: 'center center' }}></div>
-                  </div>
-                  <div className="carousel-item">
-                    <div style={{ position: 'relative', display: 'block', width: '100%', height: '275px', backgroundImage: 'url(/files-layout/layout-frontend-mobile-home-banner3.jpg)', backgroundPosition: 'center center' }}></div>
+            <div id="bannersSlideShowBootstrap22" className="carousel slide carousel-fade" data-ride="carousel" style={{ position: 'absolute', display: 'block', width: '100%', height: '100%', top: '0px', left: '0px', right: '0px', bottom: '0px' }}>
+              <div className="carousel-inner" style={{ position: 'relative', display: 'block', width: '100%', height: '100%' }}>
+                <div className="carousel-item active" style={{ position: 'relative', display: 'block', width: '100%', height: '100%' }}>
+                  <div className="ss-frontend-banners-generic-bg" style={{ '--bannerGenericBG': 'url(/files-layout/layout-frontend-home-banner1.jpg)', '--bannerMobileGenericBG': 'url(/files-layout/layout-frontend-mobile-home-banner1.jpg)' }}>
                   </div>
                 </div>
               </div>

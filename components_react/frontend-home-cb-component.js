@@ -64,7 +64,7 @@ class FrontendHome extends Component {
     // Properties.
     // ----------------------
     this.objParametersQueryString = qs.parse(this.props.location.search);
-    this.configLayoutType = 1;
+    this.configLayoutType = 111;
     // this._idParentCategories = 0;
 
     // this._pagingNRecords = gSystemConfig.configCategoriesFrontendPaginationNRecords;
@@ -434,12 +434,8 @@ class FrontendHome extends Component {
     const { gSystemConfig, SyncSystemNS, FunctionsSyncSystem } = this.context; // Deconstruct variables (each variable is allocated to it´s correspondent name).
 
     // Title Current.
-    // elementMessage01("titleCurrent", "Example of current title");
-    // FunctionsSyncSystem.elementMessage01("titleCurrent", "Example of current title");
-    // elementMessage01("titleCurrent", this.titleCurrent); // working
-    // console.log("FunctionsSyncSystem=", FunctionsSyncSystem);
-    FunctionsSyncSystem.elementMessage01('titleCurrent', this.titleCurrent);
-    FunctionsSyncSystem.elementMessage01('titleCurrentMobile', this.titleCurrent);
+    // FunctionsSyncSystem.elementMessage01('titleCurrent', this.titleCurrent);
+    // FunctionsSyncSystem.elementMessage01('titleCurrentMobile', this.titleCurrent);
   }
   // **************************************************************************************
 
@@ -514,63 +510,103 @@ class FrontendHome extends Component {
           {/* div layout (responsive). */}
           {this.configLayoutType === 111 ? (
             <React.Fragment>
-              {/* Desktop */}
-              <div className="d-none d-lg-block d-xl-block">
-                {' '}
-                {/* Note: If the content is not complex, these parameters can be incorporate to the section tag.*/}
-                <section className="ss-frontend-layout-section-content01 ss-frontend-text01">home content desktop</section>
-              </div>
+              {/* Home. */}
+              <h1 className="ss-frontend-heading01 ss-frontend-heading01-layout">
+                BRIGADEIRO Brazilian Jiu-Jitsu
+              </h1>
+              <section className="ss-frontend-layout-section-content01">
+                {/* Content component.*/}
+                <FrontendContent key={124} idParentContent={'124'} idTbContent={''} contentType={''} configLayoutType={2} configContentNRecords={''} configContentSort={''}>
+                  {/* arrCategoriesListing={ this.arrCategoriesListing } also works */}
+                </FrontendContent>
+                <a href={'/' + gSystemConfig.configRouteFrontendContent + '/109/?idTbForms=114'} className="ss-frontend-btn-base ss-frontend-btn-action ss-frontend-btn-register">
+                  Click to Begin Your Register
+                </a>
+              </section>
+              
+              {/* Academy. */}
+              <section className="ss-frontend-layout-section-full-width01">
+                <div>
+                  <img src="/files-layout/layout-desktop-section-full-width-bg1.png" alt="Element" />
+                  <h2 className="ss-frontend-heading02 ss-frontend-heading02-layout">
+                    <span>
+                      A quick look at our infra-structure and what waits for you when joining our team.
+                    </span>
+                    Brigadeiro Academy
+                  </h2>
+                  <div className="mt-2">
+                    {/* Content component.*/}
+                    <FrontendContent key={104} idParentContent={'104'} idTbContent={''} contentType={''} configLayoutType={2} configContentNRecords={''} configContentSort={''}>
+                      {/* arrCategoriesListing={ this.arrCategoriesListing } also works */}
+                    </FrontendContent>
+                  </div>
+                  <a href={'/' + gSystemConfig.configRouteFrontendContent + '/109/?idTbForms=114'} className="ss-frontend-btn-generic-bg01 ss-frontend-btn-click-register ss-frontend-element-center-absolute">
+                    Click to Begin Your Register
+                  </a>
+                </div>
+              </section>
 
-              {/* Mobile */}
-              <div className="d-lg-none">
-                <section class="ss-frontend-mobile-layout-section-content01 ss-frontend-text01">home content mobile</section>
-              </div>
+              {/* Programs. */}
+              <h1 className="ss-frontend-heading01 ss-frontend-heading01-layout">
+                Brigadeiro Programs
+              </h1>
+              <section className="ss-frontend-layout-section-content01">
+                <div className="ss-frontend-categories-listing-container">
+                  {/* Categories component. */}
+                  <FrontendCategories key={105} idParentCategories={'105'} idRegisterUser={''} configLayoutType={2} configCategoriesNRecords={''} configCategoriesSort={gSystemConfig.configCategoriesSort} activation={1} activation1={''} activation2={''} activation3={''} activation4={''} activation5={''}></FrontendCategories>
+                </div>
+              </section>
+
+              {/* Testimonials. */}
+              <section className="ss-frontend-layout-section-full-width01">
+                <div>
+                  <img src="/files-layout/layout-desktop-section-full-width-bg1.png" alt="Element" />
+                  <h2 className="ss-frontend-heading02 ss-frontend-heading02-layout">
+                    <span>
+                      Check out what our students say about being part of our family.
+                    </span>
+                    Testimonials
+                  </h2>
+                  <div className="mt-2">
+                    {/* Publications component. */}
+                    <FrontendPublications key={137} idParentPublications={'137'} idRegisterUser={''} configLayoutType={3} configPublicationsNRecords={''} configPublicationsSort={gSystemConfig.configPublicationsSort} activation={1} activation1={''} activation2={''} activation3={''} activation4={''} activation5={''}></FrontendPublications>
+                  </div>
+                  <a href={'/' + gSystemConfig.configRouteFrontendContent + '/109/?idTbForms=114'} className="ss-frontend-btn-generic-bg01 ss-frontend-btn-click-register ss-frontend-element-center-absolute">
+                    Click to Begin Your Register
+                  </a>
+                </div>
+              </section>
+
+              {/* Philanthropy. */}
+              <h1 className="ss-frontend-heading01 ss-frontend-heading01-layout">
+                Brigadeiro Philanthropy
+              </h1>
+              <section className="ss-frontend-layout-section-content01">
+                {/* Content component.*/}
+                <FrontendContent key={107} idParentContent={'107'} idTbContent={''} contentType={''} configLayoutType={2} configContentNRecords={''} configContentSort={''}>
+                  {/* arrCategoriesListing={ this.arrCategoriesListing } also works */}
+                </FrontendContent>
+              </section>
+
+              {/* Instagram. */}
+              <section className="ss-frontend-layout-section-full-width01" style={{ backgroundColor: '#000000', marginBottom: '0px' }}>
+                <div>
+                  <img src="/files-layout/layout-desktop-section-full-width-bg2.png" alt="Element" />
+                  <h2 className="ss-frontend-heading02 ss-frontend-heading02-layout">
+                    <span>
+                      Follow us on instagram and take a glimpse of what is like to train in our gym.
+                    </span>
+                    Instagram
+                  </h2>
+                  <div className="mt-2">
+                  </div>
+                </div>
+              </section>
             </React.Fragment>
           ) : (
             ``
           )}
         </React.Fragment>
-
-        {/* Categories component. */}
-        <FrontendCategories key={117} idParentCategories={'117'} idRegisterUser={''} configLayoutType={1} configCategoriesNRecords={''} configCategoriesSort={gSystemConfig.configCategoriesSort} activation={1} activation1={''} activation2={''} activation3={''} activation4={''} activation5={''}></FrontendCategories>
-
-        {/* Content component.*/}
-        <FrontendContent key={106} idParentContent={'106'} idTbContent={''} contentType={''} configLayoutType={2} configContentNRecords={''} configContentSort={''}>
-          {/* arrCategoriesListing={ this.arrCategoriesListing } also works */}
-        </FrontendContent>
-
-        {/* Products component. */}
-        <FrontendProducts key={960} idParentProducts={'960'} idRegisterUser={''} configLayoutType={2} configProductsNRecords={'3'} configProductsSort={gSystemConfig.configProductsSort} activation={1} activation1={''} activation2={''} activation3={''} activation4={''} activation5={''}></FrontendProducts>
-
-        {/* Publications component. */}
-        <FrontendPublications key={130} idParentPublications={'130'} idRegisterUser={''} configLayoutType={2} configPublicationsNRecords={''} configPublicationsSort={gSystemConfig.configPublicationsSort} activation={1} activation1={''} activation2={''} activation3={''} activation4={''} activation5={''}></FrontendPublications>
-
-
-        <section id="divTerms" className="ss-frontend-text01 ss-frontend-terms">
-          <div>
-            <div>
-              <strong>Cookie, Privacy Policy And Terms Consent</strong>
-              By clicking “Accept All”, you agree to our terms and consent to our website's use of cookies to give you the most relevant experience by remembering your preferences and future visits. You may also visit “Cookie Settings” on your browser to modify the settings.
-            </div>
-
-            <div>
-              <a
-                onClick={() => {
-                  FunctionsSyncSystem.htmlGenericStyle01('divTerms', 'display', 'none');
-                }}
-                className="ss-frontend-btn-base ss-frontend-btn-action-execute"
-              >
-                Accept All
-              </a>
-              <a href="content/138/" className="ss-frontend-btn-base ss-frontend-btn-action-alert">
-                Read Terms
-              </a>
-              <a href="content/137/" className="ss-frontend-btn-base ss-frontend-btn-action-alert">
-                Read Privacy Policy
-              </a>
-            </div>
-          </div>
-        </section>
       </React.Fragment>
     );
   }

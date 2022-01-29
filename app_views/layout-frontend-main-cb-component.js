@@ -98,7 +98,7 @@ class LayoutFrontendMain extends Component {
    * @param {string} strMessage
    * @example
    */
-   setTitleCurrent(sProperty, strMessage) {
+  setTitleCurrent(sProperty, strMessage) {
     this.setState({
       // [stateProperty]: strMessage
       // titleCurrent: strMessage
@@ -231,6 +231,7 @@ class LayoutFrontendMain extends Component {
           {/* hrpTrackingCode */}
 
           <meta charSet="UTF-8" />
+          <meta name="format-detection" content="telephone=no" />
 
           {/* ReactRenderHTML(metaTagsDefault1) */}
           {HTMLReactParser(tagsMetaDefault1)}
@@ -251,199 +252,115 @@ class LayoutFrontendMain extends Component {
 
         <body className={/* StylesFrontend["ss-frontend-body01"]*/ 'ss-frontend-body01'}>
           <noscript>Please Enable JavaScript</noscript>
-          <div id="root">
-            <header className="ss-frontend-layout-header01">
+          <div id="root" className="ss-frontend-layout-container01">
+            <header id="layoutHeader" className="ss-frontend-layout-header01">
               <div>
                 <a href="/" title="Home" className="ss-frontend-layout-header-logo">
                 </a>
-                <a href={'tel:' + gSystemConfig.configSystemClientCel.replace(' ', '-')} title="Phone" className="ss-frontend-link-contact01 ss-frontend-link-contact-layout">
-                  {gSystemConfig.configSystemClientCel}
-                </a>
-
                 {/* Social Media */}
                 <address className="ss-frontend-social-media-layout">
-                  <a href="https://www.linkedin.com/in/xxx/" target="_blank" title="LinkedIn" className="ss-frontend-social-media">
-                    <i className="fab fa-linkedin-in" />
+                  <a href="https://www.facebook.com/brigadeirojiujitsuusa/" target="_blank" title="Facebook" className="ss-frontend-social-media">
+                  <i className="fab fa-facebook" />
                   </a>
-                  <a href="https://youtu.be/xxx" target="_blank" title="YouTube" className="ss-frontend-social-media">
-                    <i className="fab fa-youtube" />
+                  <a href="https://youtu.be/" target="_blank" title="YouTube" className="ss-frontend-social-media">
+                  <i className="fab fa-youtube" />
                   </a>
-                  <a href={'mailto:' + gSystemConfig.configSystemClientEmail} target="_blank" title="e-mail" className="ss-frontend-social-media">
-                    <i className="fas fa-envelope" />
+                  <a href="https://www.instagram.com/brigadeirojiujitsu.usa/" target="_blank" title="Instagram" className="ss-frontend-social-media">
+                  <i className="fab fa-instagram" />
                   </a>
                 </address>
-
-                {/* Shortcuts */}
+                <a href="https://api.whatsapp.com/send?phone=19047049877" target="_blank" title="Phone" className="ss-frontend-link-contact01 ss-frontend-link-contact-layout">
+                (904) 704-9877
+                </a>
                 <a
                   onClick={() => {
-                    FunctionsSyncSystem.scrollToTarget('anchorFAQ');
+                    FunctionsSyncSystem.elementShowHideToggle('navMenu');
                   }}
-                  title="Frequently Asked Questions"
-                  className="ss-frontend-btn-generic-bg-color01"
-                  style={{ '--btnGenericBGColor': '#000000', '--btnGenericBGColorHover': '#ffffff', '--btnGenericColor': '#78c3ae', '--btnGenericColorHover': '#0000ff' }}
+                  title="Mobile Menu"
+                  className="ss-frontend-mobile-layout-header-nav-menu d-lg-none"
                 >
-                  <span>FAQ</span>
+                  <i className="fa fa-bars" />
                 </a>
-
-                <a
-                  {...this.props.location.pathname !== '/' ? 
-                      { href: "/#anchorFAQ", }
-                    :
-                      {}
-                  }
-                  onClick={() => {
-                    // FunctionsSyncSystem.scrollToTarget('anchorFAQ');
-                    
-                    /*
-                    let waitForValueUpdate = (valueCheck, valueReference, _callBackFunction) => {
-                      if (valueCheck !== valueReference) {
-                        // setTimeout(flagFrontendHomeLoaded, 50);
-                        setTimeout(waitForValueUpdate(valueCheck, valueReference, _callBackFunction), 3000);
-                        return;
-                      }
-        
-                      _callBackFunction();
-                      // Debug.
-                      // console.log("this.state.frontendHomeLoad=", this.state.frontendHomeLoad);
-                    };
-        
-                    waitForValueUpdate(this.state.frontendHomeLoad, true, () => {
-                      console.log("this.state.frontendHomeLoad=", this.state.frontendHomeLoad);
-                    });
-                    */ /* caused problem on the online sandbox - test on production and try to make it external function */
-
-                    // Function to wait for the value to change.
-                    let flagFrontendHomeLoaded = () => {
-                      if (this.context.frontendHomeLoaded === false) {
-                        setTimeout(flagFrontendHomeLoaded, 50);
-                        return;
-                      }
-                      FunctionsSyncSystem.scrollToTarget('anchorFAQ');
-                      // console.log('this.state.frontendHomeLoad=', this.state.frontendHomeLoad);
-                    };
-
-                    flagFrontendHomeLoaded();
-                  }}
-                  title="Frequently Asked Questions"
-                  className="ss-frontend-btn-generic-bg-color01"
-                  style={{ '--btnGenericBGColor': '#000000', '--btnGenericBGColorHover': '#ffffff', '--btnGenericColor': '#78c3ae', '--btnGenericColorHover': '#0000ff' }}
-                >
-                  <span>FAQ</span>
-                </a>
+                <nav id="navMenu" className="ss-frontend-layout-header-nav d-none d-lg-block d-xl-block">
+                  <ul className="ss-frontend-links-ul01">
+                    <li className="ss-frontend-links-li01 d-lg-none">
+                      <a
+                        id="navLinkClose"
+                        onClick={() => {
+                          // FunctionsSyncSystem.htmlGenericStyle01('divMenuMobile01', 'display', 'none');
+                          FunctionsSyncSystem.elementShowHideToggle('navMenu');
+                        }}
+                        title="Close Menu"
+                        className="ss-frontend-link01"
+                      >
+                        X Close
+                      </a>
+                    </li>
+                    <li className="ss-frontend-links-li01">
+                      <a id="navLinkHome" href="/" title="Home" className="ss-frontend-link01">
+                        Home
+                      </a>
+                    </li>
+                    <li className="ss-frontend-links-li01">
+                      <a id="navLinkAcademy" href={'/' + gSystemConfig.configRouteFrontendContent + '/104/'} title="B/Academy" className="ss-frontend-link01">
+                        B/Academy
+                      </a>
+                    </li>
+                    <li className="ss-frontend-links-li01">
+                      <a id="navLinkPrograms" href={'/' + gSystemConfig.configRouteFrontendCategories + '/105/'} title="B/Programs" className="ss-frontend-link01">
+                        B/Programs
+                      </a>
+                    </li>
+                    <li className="ss-frontend-links-li01">
+                      <a id="navLinkAssociation" href={'/' + gSystemConfig.configRouteFrontendContent + '/106/'} title="B/Association" className="ss-frontend-link01">
+                        B/Association
+                      </a>
+                    </li>
+                    <li className="ss-frontend-links-li01">
+                      <a id="navLinkStore" href={'/' + gSystemConfig.configRouteFrontendCategories + '/111/'} title="B/Store" className="ss-frontend-link01">
+                        B/Store
+                      </a>
+                    </li>
+                    <li className="ss-frontend-links-li01">
+                      <a id="navLinkPhilanthropy" href={'/' + gSystemConfig.configRouteFrontendContent + '/107/'} title="B/Philanthropy" className="ss-frontend-link01">
+                        B/Philanthropy
+                      </a>
+                    </li>
+                    <li className="ss-frontend-links-li01">
+                      <a id="navLinkContact" href={'/' + gSystemConfig.configRouteFrontendContent + '/108/?idTbForms=113'} title="Contact Us" className="ss-frontend-link01">
+                        Contact Us
+                      </a>
+                    </li>
+                    <li className="ss-frontend-links-li01 d-lg-none">
+                      <a id="navLinkContact" href={'/' + gSystemConfig.configRouteFrontendContent + '/110/'} title="Privacy Policy" className="ss-frontend-link01">
+                        Privacy Policy
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </header>
 
-            {/* Desktop. */}
-            <div className="d-none d-lg-block d-xl-block">
-              <nav>
-                <a className="ss-frontend-link01" href={'/'} title={'Home'}>
-                  Link - Home
-                </a>
-                <a className="ss-frontend-link01" href={'/' + gSystemConfig.configRouteFrontendCategories + '/813/'} title={'Categories'}>
-                  Link - Categories
-                </a>
-                <a className="ss-frontend-link01" href={'/' + gSystemConfig.configRouteFrontendContent + '/849/'} title={'Content'}>
-                  Link - Content
-                </a>
-                <a className="ss-frontend-link01" href={'/' + gSystemConfig.configRouteFrontendContent + '/849/?idTbForms=904'} title={'Content'}>
-                  Link - Content with form
-                </a>
-                <a className="ss-frontend-link01" href={'/' + gSystemConfig.configRouteFrontendProducts + '/960/'} title={'Products'}>
-                  Link - Products
-                </a>
-                <a className="ss-frontend-link01" href={'/' + gSystemConfig.configRouteFrontendPublications + '/1369/'} title={'Publications'}>
-                  Link - Publications
-                </a>
-                <a className="ss-frontend-link01" href={'/' + gSystemConfig.configRouteFrontendQuizzes + '/1648/'} title={'Quizzes'}>
-                  Link - Quizzes
-                </a>
-                <a className="ss-frontend-link01" href={'/' + gSystemConfig.configRouteFrontendLogin + '/'} title={'Login'}>
-                  Link - Login
-                </a>
-                <a className="ss-frontend-link01" href={'/' + gSystemConfig.configRouteFrontendLogoff + '/'} title={'Logoff'}>
-                  Link - Logoff
-                </a>
-                <a className="ss-frontend-link01" href={'/' + gSystemConfig.configRouteFrontendDashboard + '/'} title={'Dashboard'}>
-                  Link - Dashboard
-                </a>
-              </nav>
+            {/* Banner */}
+            {this.props.location.pathname == '/' ?
+              <div className="ss-frontend-banners-container">
+                <div className="ss-frontend-banners-container-element">
+                  <img src="/files-layout/layout-desktop-banner-img1.png" alt="Element" />
+                </div>
+                <FrontendBanners idParentBanners={''} idTbCategories={''} configLayoutType={22} configDisplay={'horizontal'} configContentNRecords={''} configContentSort={''}></FrontendBanners>
+              </div>
+              : ``}
+            <div className="ss-frontend-banners-footer">
+              <span>
+                EVERYWHERE
+              </span>
+              <span>
+                EVERY DAY
+              </span>
+              <span>
+                FOR EVERYONE
+              </span>
             </div>
-
-            {/* Mobile. */}
-            <div className="d-lg-none">
-              {/* Menu mobile. */}
-              <a
-                onclick="elementShowHideToggle('navMenu');"
-                onClick={() => {
-                  FunctionsSyncSystem.elementShowHideToggle('navMenu');
-                }}
-                title="Mobile Menu"
-                className="ss-frontend-mobile-layout-header-nav-menu d-lg-none"
-              >
-                <i className="fa fa-bars" />
-              </a>
-              {/*
-              <a
-                onClick={() => {
-                  FunctionsSyncSystem.htmlGenericStyle01('divMenuMobile01', 'display', 'block');
-                }}
-                style={{ position: 'relative', display: 'block', padding: '5px', cursor: 'pointer' }}
-                title="Menu"
-              >
-                <img src="/files-layout/frontend-mobile-menu01.png" alt="Menu" />
-              </a>
-              */}
-
-              <nav id="navMenu" className="ss-frontend-layout-header-nav d-none d-lg-block d-xl-block">
-                <a
-                  id="navLinkClose"
-                  onClick={() => {
-                    // FunctionsSyncSystem.htmlGenericStyle01('divMenuMobile01', 'display', 'none');
-                    FunctionsSyncSystem.elementShowHideToggle('navMenu');
-                  }}
-                  className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01"
-                  style={{ cursor: 'pointer' }}
-                  title="Close Menu"
-                >
-                  X Close
-                </a>
-                <a id="navLinkHome" href="/" className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" title="Home">
-                  Home
-                </a>
-                <a href={'/' + gSystemConfig.configRouteFrontendContent + '/107/'} className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" title="About Us">
-                  About Us
-                </a>
-                <a href={'/' + gSystemConfig.configRouteFrontendProducts + '/108/'} className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" title="Real Estate Showcase">
-                  Real Estate Showcase
-                </a>
-                <a href={'/' + gSystemConfig.configRouteFrontendContent + '/109/?idTbForms=117'} className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" title="Send Us Your Project">
-                  Send Us Your Project
-                </a>
-                <a href={'/' + gSystemConfig.configRouteFrontendContent + '/111/'} className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" title="Partnerships">
-                  Partnerships
-                </a>
-                <a href={'/' + gSystemConfig.configRouteFrontendContent + '/110/?idTbForms=115'} className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" title="Contact">
-                  Contact
-                </a>
-                <a href={'/' + gSystemConfig.configRouteFrontendContent + '/112/'} className="ss-frontend-mobile-links-layout01 ss-frontend-mobile-links01" title="Privacy and Cookie Policy">
-                  Privacy and Cookie Policy
-                </a>
-              </nav>
-            </div>
-
-            {this.props.location.pathname == '/' ? <FrontendBanners idParentBanners={''} idTbCategories={''} configLayoutType={22} configDisplay={'horizontal'} configContentNRecords={''} configContentSort={''}></FrontendBanners> : ``}
-
-            {/* Content place holder - current title */}
-            <h1 id="titleCurrent" className="ss-frontend-heading01">
-              {this.state.titleCurrent}
-              {/* this.props.cphTitle*/ ''}
-            </h1>
-
-            {/* Content place holder - current title (mobile */}
-            <h1 id="titleCurrentMobile" className="ss-frontend-heading01">
-              {this.state.titleCurrent}
-              {/* this.props.cphTitle*/ ''}
-            </h1>
 
             {/* Messages */}
             <div id="messageSuccess" className="ss-frontend-success" style={{ display: 'none' }}></div>
@@ -451,71 +368,157 @@ class LayoutFrontendMain extends Component {
             <div id="messageAlert" className="ss-frontend-alert" style={{ display: 'none' }}></div>
 
             {/* Content place holder - body */}
-            <main>{this.props.cphBody}</main>
+            <main id="layoutMain" className="ss-frontend-layout-main01">
+              <div>
+                {this.props.cphBody}
+              </div>
+            </main>
 
-            <footer className="ss-frontend-layout-footer01">
-              <a
-                onClick={() => {
-                  FunctionsSyncSystem.scrollToTarget('anchorTop');
-                }}
-                title={SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, 'backendButtonBackTop')}
-                className="ss-frontend-btn-top"
-              >
-              </a>
-
-              <nav>
-                <ul className="ss-frontend-links-ul02 d-none d-lg-block d-xl-block" style={{ position: 'absolute', left: '0px', top: '0px' }}>
-                  <li className="ss-frontend-links-li02">
-                    <a href={'/'} title="Home" className="ss-frontend-footer-links01">
-                      Home
+            {/* Footer. */}
+            <footer className="ss-frontend-layout-footer01 ss-frontend-text-contact01">
+              <div>
+                {/* Site map. */}
+                <nav className="ss-frontend-layout-footer-nav-layout">
+                  <h4>
+                    Site Map
+                  </h4>
+                  <div>
+                    <ul className="ss-frontend-links-ul02">
+                      <li className="ss-frontend-links-li02">
+                        <a href="/" title="Home" className="ss-frontend-footer-links01">
+                          Home
+                        </a>
+                      </li>
+                      <li className="ss-frontend-links-li02">
+                        <a href={'/' + gSystemConfig.configRouteFrontendContent + '/104/'} title="Brigadeiro Academy" className="ss-frontend-footer-links01">
+                          Brigadeiro Academy
+                        </a>
+                      </li>
+                      <li className="ss-frontend-links-li02">
+                        <a href={'/' + gSystemConfig.configRouteFrontendCategories + '/105/'} title="Brigadeiro Programs" className="ss-frontend-footer-links01">
+                          Brigadeiro Programs
+                        </a>
+                      </li>
+                    </ul>
+                    <ul className="ss-frontend-links-ul02">
+                      <li className="ss-frontend-links-li02">
+                        <a href={'/' + gSystemConfig.configRouteFrontendContent + '/106/'} title="Brigadeiro Association" className="ss-frontend-footer-links01">
+                          Brigadeiro Association
+                        </a>
+                      </li>
+                      <li className="ss-frontend-links-li02">
+                        <a href={'/' + gSystemConfig.configRouteFrontendCategories + '/111/'} title="Brigadeiro Store" className="ss-frontend-footer-links01">
+                          Brigadeiro Store
+                        </a>
+                      </li>
+                      <li className="ss-frontend-links-li02">
+                        <a href={'/' + gSystemConfig.configRouteFrontendContent + '/107/'} title="Brigadeiro Philanthropy" className="ss-frontend-footer-links01">
+                          Brigadeiro Philanthropy
+                        </a>
+                      </li>
+                    </ul>
+                    <ul className="ss-frontend-links-ul02">
+                      <li className="ss-frontend-links-li02">
+                        <a href={'/' + gSystemConfig.configRouteFrontendContent + '/108/?idTbForms=113'} title="Contact Us" className="ss-frontend-footer-links01">
+                          Contact Us
+                        </a>
+                      </li>
+                      <li className="ss-frontend-links-li02">
+                        <a href={'/' + gSystemConfig.configRouteFrontendContent + '/110/'} title="Register" className="ss-frontend-footer-links01">
+                          Register
+                        </a>
+                      </li>
+                      <li className="ss-frontend-links-li02">
+                        <a href="#" title="Privacy Policy and Terms of Use" className="ss-frontend-footer-links01">
+                          Privacy Policy and Terms of Use
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+                {/* Social Media. */}
+                <address className="ss-frontend-social-media-layout-footer">
+                  <h4>
+                    Social Media
+                  </h4>
+                  <div>
+                    <a href="https://www.facebook.com/brigadeirojiujitsuusa/" target="_blank" title="Facebook" className="ss-frontend-social-media-footer">
+                      <i className="fab fa-facebook" />
                     </a>
-                    <a href={'/'} title="Home" className="ss-frontend-footer-links01">
-                      Home
+                    <a href="https://youtu.be/" target="_blank" title="YouTube" className="ss-frontend-social-media-footer">
+                      <i className="fab fa-youtube" />
                     </a>
-                    <a href={'/'} title="Home" className="ss-frontend-footer-links01">
-                      Home
+                    <a href="https://www.instagram.com/brigadeirojiujitsu.usa/" target="_blank" title="Instagram" className="ss-frontend-social-media-footer">
+                      <i className="fab fa-instagram" />
                     </a>
-                  </li>
-                </ul>
-
-                <a href={'tel:' + gSystemConfig.configSystemClientCel} title="Phone" className="ss-frontend-footer-links01 ss-frontend-footer-contact-layout">
-                  {gSystemConfig.configSystemClientCel}
-                </a>
-                <a href={'mailto:' + gSystemConfig.configSystemClientEmail} title="e-mail" className="ss-frontend-footer-links01 ss-frontend-footer-email-layout d-none d-lg-block d-xl-block">
-                  {gSystemConfig.configSystemClientEmail}
-                </a>
-              </nav>
-
-              {/* Social Media */}
-              <address className="ss-frontend-social-media-layout-footer">
-                <a href="https://www.linkedin.com/in/xxx/" target="_blank" title="LinkedIn" className="ss-frontend-social-media-footer">
-                  <i className="fab fa-linkedin-in" />
-                </a>
-                <a href="https://youtu.be/xxx" target="_blank" title="YouTube" className="ss-frontend-social-media-footer">
-                  <i className="fab fa-youtube" />
-                </a>
-                <a href="https://t.me/username?text=" target="_blank" title="Telegram" className="ss-frontend-social-media-footer">
-                  <i className="fab fa-telegram-plane" />
-                </a>
-                <a href={'mailto:' + gSystemConfig.configSystemClientEmail} target="_blank" title="e-mail" className="ss-frontend-social-media-footer d-lg-none">
-                  <i className="fas fa-envelope" />
-                </a>
-              </address>
-
-              {/* Credits. */}
-              <small className="ss-frontend-copyright ss-frontend-credit-layout">
-                {SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, 'layoutCopyright')} ©&nbsp;
-                {gSystemConfig.configCopyrightYear}&nbsp;
-                {SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, 'configSiteTile')}.&nbsp;
-                {SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, 'layoutCopyright1')}
-                {/* Development. */}
-                <a href={gSystemConfig.configDevSite} target="_blank" className="ss-frontend-credit" style={{ float: 'right' }}>
-                  {SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, 'layoutDevelopment')}:&nbsp;
-                  {SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, 'layoutDevName')}
-                </a>
-              </small>
+                  </div>
+                  <img src="/files-layout/layout-mobile-footer-payments1.png" alt="Payments" className="d-lg-none" />
+                </address>
+                <a
+                  onClick={() => {
+                    FunctionsSyncSystem.scrollToTarget('anchorTop');
+                  }}
+                  title="Home"
+                  className="ss-frontend-layout-footer-logo"
+                ></a>
+                {/* Customer service. */}
+                <div className="ss-frontend-footer-contact-layout">
+                  <h4>
+                    Customer Service
+                  </h4>
+                  <a href="https://api.whatsapp.com/send?phone=19047049877" title="Phone" className="ss-frontend-footer-links01">
+                    (904) 704-9877
+                  </a>
+                  <a href="mailto:contact@brigadeirojiujitsu.com" title="e-mail" className="ss-frontend-footer-links01">
+                    contact@brigadeirojiujitsu.com
+                  </a>
+                  <img src="/files-layout/layout-desktop-footer-payments1.png" alt="Payments" className="d-none d-lg-block d-xl-block" />
+                </div>
+                {/* Credits. */}
+                <small className=" ss-frontend-credit-layout">
+                  <span className="ss-frontend-copyright">
+                    {SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, 'layoutCopyright')} ©&nbsp;
+                    {gSystemConfig.configCopyrightYear}&nbsp;
+                    {SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, 'configSiteTile')}.&nbsp;
+                    {SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, 'layoutCopyright1')}
+                  </span>
+                  <a href={gSystemConfig.configDevSite} target="_blank" className="ss-frontend-credit">
+                    {SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, 'layoutDevelopment')}:&nbsp;
+                    {SyncSystemNS.FunctionsGeneric.appLabelsGet(gSystemConfig.configLanguageFrontend.appLabels, 'layoutDevName')}
+                  </a>
+                </small>
+              </div>
             </footer>
           </div>
+
+          {/* Button Scroll to Top (fixed). */}
+          <button
+            id="btnTopFixed"
+            onClick={() => {
+              FunctionsSyncSystem.scrollToTarget('anchorTop');
+            }}
+            className="ss-frontend-shadow01 ss-frontend-btn-top-fixed"
+            style={{ visibility: 'hidden' }}
+          >
+            <i className="fas fa-caret-up" />
+          </button>
+          <Safe.script>
+            {`
+              // Scroll listener.
+              // Note: will not work if html / body height is set to 100% - use min/max-height.
+                document.addEventListener('scroll', (e) => {
+                  // Button back to top.
+                  // elementShowByPosition('btnTopFixed', 'top', '50');
+                  FunctionsSyncSystem.elementShowByPosition('btnTopFixed', 'top', '50');
+    
+    
+                  // Debug.
+                  // console.log('elementHeader', elementHeader);
+                  // console.log('scrollValueRef', scrollValueRef);
+                  // console.log('window.pageYOffset', window.pageYOffset);
+                });
+              `}
+          </Safe.script>
 
           {/* React bundle script - SSR. */}
           <Safe.script src="/bundle.react.client.js"></Safe.script>

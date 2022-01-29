@@ -460,8 +460,8 @@ class FrontendContentListing extends Component {
     // FunctionsSyncSystem.elementMessage01("titleCurrent", "Example of current title");
     // elementMessage01("titleCurrent", this.titleCurrent); // working
     // console.log("FunctionsSyncSystem=", FunctionsSyncSystem);
-    FunctionsSyncSystem.elementMessage01('titleCurrent', this.titleCurrent);
-    FunctionsSyncSystem.elementMessage01('titleCurrentMobile', this.titleCurrent);
+    // FunctionsSyncSystem.elementMessage01('titleCurrent', this.titleCurrent);
+    // FunctionsSyncSystem.elementMessage01('titleCurrentMobile', this.titleCurrent);
   }
   // **************************************************************************************
 
@@ -491,15 +491,21 @@ class FrontendContentListing extends Component {
     // Output.
     // ----------------------
     return (
-      <section className="ss-frontend-layout-section-content01">
-        {/* Content. */}
-        <FrontendContent idParentContent={this._idParentContent} idTbContent={''} contentType={''} configLayoutType={2} configContentNRecords={''} configContentSort={''}>
-          {/* arrCategoriesListing={ this.arrCategoriesListing } also works */}
-        </FrontendContent>
+      <React.Fragment>
+        <h1 className="ss-frontend-heading01 ss-frontend-heading01-layout">
+          {this.titleCurrent}
+        </h1>
+        <section className="ss-frontend-layout-section-content01">
 
-        {/* Forms. */}
-        {this._idTbForms != '' ? <FrontendForms idTbForms={this._idTbForms} configLayoutType={22} configFormsSort={''}></FrontendForms> : ``}
-      </section>
+          {/* Content. */}
+          <FrontendContent idParentContent={this._idParentContent} idTbContent={''} contentType={''} configLayoutType={2} configContentNRecords={''} configContentSort={''}>
+            {/* arrCategoriesListing={ this.arrCategoriesListing } also works */}
+          </FrontendContent>
+
+          {/* Forms. */}
+          {this._idTbForms != '' ? <FrontendForms idTbForms={this._idTbForms} configLayoutType={22} configFormsSort={''}></FrontendForms> : ``}
+        </section>
+      </React.Fragment>
     );
     // ----------------------
   }

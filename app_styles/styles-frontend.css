@@ -3,7 +3,7 @@
 /*
 substitute:
 ../app_fonts/ ->  /fonts/
-../app_files_layout/ -> /files-layout/
+/files-layout/ -> /files-layout/
  */
 /* ************************************************************************************** */
 
@@ -54,7 +54,7 @@ substitute:
 @media(max-width: 991px)
 {
     :root{
-        --ssFrontendDefaultFontSize: 14px;
+        --ssFrontendDefaultFontSize: 13px;
         --ssFrontendDefaultTitleFontSize: 18px;
         --ssFrontendDefaultSubheadingFontSize: 16px;
         --ssFrontendDefaultCaptionFontSize: 11px;
@@ -213,7 +213,7 @@ button:focus {
     border-top: 5px solid #747474;
 
     /* 
-    background-image: url(../app_files_layout/frontend-desktop-layout-head-bg1.png); 
+    background-image: url(/files-layout/frontend-desktop-layout-head-bg1.png); 
     background-repeat: no-repeat; 
     background-position: center top; 
     */
@@ -246,7 +246,7 @@ button:focus {
     border-top: initial; 
 
     /* 
-    background-image: url(../app_files_layout/frontend-desktop-layout-head-bg1.png); 
+    background-image: url(/files-layout/frontend-desktop-layout-head-bg1.png); 
     background-repeat: no-repeat; 
     background-position: center top; 
     */
@@ -272,7 +272,7 @@ button:focus {
     width: 129px; 
     height: 129px; 
 
-    background-image: url(../app_files_layout/frontend-desktop-logo.png); 
+    background-image: url(/files-layout/frontend-desktop-logo.png); 
     background-repeat: no-repeat; 
 }
 @media(max-width: 991px) {
@@ -295,7 +295,7 @@ button:focus {
   width: 109px; 
   height: 109px; 
 
-  background-image: url(../app_files_layout/frontend-desktop-footer-logo.png); 
+  background-image: url(/files-layout/frontend-desktop-footer-logo.png); 
   background-repeat: no-repeat; 
 }
 @media(max-width: 991px) {
@@ -378,7 +378,7 @@ button:focus {
 
     background-color: #747474; 
 
-    background-image: url(../app_files_layout/layout-desktop-footer-bg1.jpg); 
+    background-image: url(/files-layout/layout-desktop-footer-bg1.jpg); 
     background-repeat: no-repeat; 
     background-position: center bottom;
     
@@ -415,6 +415,8 @@ button:focus {
     
     top:  30px;
     left: 0px;
+    
+    z-index: 1;
 }
 .ss-frontend-layout-footer-nav-layout > h4, .ss-frontend-social-media-layout-footer > h4 {
     font-size: 45px;
@@ -447,6 +449,7 @@ button:focus {
 
     margin-left: auto; 
     margin-right: auto;
+    margin-top: 15px;
     
     z-index: 1;
 }
@@ -582,7 +585,7 @@ button:focus {
 
     text-align: left; 
 
-    background-image: url(../app_files_layout/layout-desktop-heading-bg1.png); 
+    background-image: url(/files-layout/layout-desktop-heading-bg1.png); 
     background-repeat: no-repeat; 
     background-position: right bottom;
 
@@ -599,7 +602,7 @@ button:focus {
 
     text-align: left; 
 
-    background-image: url(../app_files_layout/layout-mobile-heading-bg1.png); 
+    background-image: url(/files-layout/layout-mobile-heading-bg1.png); 
     background-repeat: no-repeat; 
     background-position: right bottom;
 
@@ -633,7 +636,7 @@ button:focus {
   margin: 0px 0px 0px 255px; 
   padding: 15px 0px 0px 0px;
 
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .ss-frontend-heading02-layout > span {
   position: absolute; 
@@ -653,15 +656,18 @@ button:focus {
     height: 45px; 
     line-height: 45px; 
     
-    margin: 0px 0px 0px 95px; 
+    margin: 0px 0px 20px 95px; 
     padding: 0px 0px 0px 0px;
     
   }
   .ss-frontend-heading02-layout > span {
     font-size: 9px;
+    line-height: 14px;
     font-weight: normal;
     
-    top: 15px;
+    width: 200px;
+    
+    top: 33px;
     left: 0px;
   }  
 }
@@ -709,13 +715,13 @@ button:focus {
     line-height: 45px; 
     text-align: center;
 
-    background-image: url(../app_files_layout/layout-desktop-icon-phone1.png), url(../app_files_layout/layout-desktop-contact-bg1.png); 
+    background-image: url(/files-layout/layout-desktop-icon-phone1.png), url(/files-layout/layout-desktop-contact-bg1.png); 
     background-repeat: no-repeat, no-repeat; 
     background-position: 42px 7px, center top;
     /*padding-right: 95px;*/
 }
 .ss-frontend-link-contact-layout:hover {
-    /* background-image: url(../app_files_layout/frontend-desktop-icon-contact-a.png);  */
+    /* background-image: url(/files-layout/frontend-desktop-icon-contact-a.png);  */
 }
 @media(max-width: 991px) {
   .ss-frontend-link-contact01 {
@@ -732,7 +738,7 @@ button:focus {
     height: 32px; 
     line-height: 32px; 
 
-    background-image: url(../app_files_layout/layout-mobile-icon-phone1.png), url(../app_files_layout/layout-mobile-contact-bg1.png); 
+    background-image: url(/files-layout/layout-mobile-icon-phone1.png), url(/files-layout/layout-mobile-contact-bg1.png); 
     background-repeat: no-repeat, no-repeat; 
     background-position: 30px 7px, center top;
   }
@@ -808,6 +814,8 @@ button:focus {
     /*text-decoration: none; */
 
     border-radius: 3px;
+    
+    margin-right: 5px;
 }
 .ss-frontend-social-media-footer:hover {
     color: #ffffff;
@@ -831,6 +839,8 @@ button:focus {
     text-align: center;
     
     margin-top: 15px;
+    margin-right: 2px;
+    margin-left: 2px;
   }
   .ss-frontend-social-media-layout-footer > img {
     margin-top: 10px;
@@ -873,7 +883,7 @@ button:focus {
     text-align: right;
 
     /*
-    background-image: url(../app_files_layout/frontend-desktop-icon-contact-footer.png); 
+    background-image: url(/files-layout/frontend-desktop-icon-contact-footer.png); 
     background-repeat: no-repeat; 
     background-position: left 12px; 
     padding-left: 25px;
@@ -881,7 +891,7 @@ button:focus {
 }
 .ss-frontend-footer-contact-layout:hover {
     /*
-    background-image: url(../app_files_layout/frontend-desktop-icon-contact-footer-a.png);
+    background-image: url(/files-layout/frontend-desktop-icon-contact-footer-a.png);
     */ 
 }
 .ss-frontend-footer-contact-layout > h4 {
@@ -1017,12 +1027,12 @@ button:focus {
     padding-right: 15px; 
     /* border-left: 1px solid #78c3ae; */
     
-    background-image: url(../app_files_layout/layout-desktop-nav-bg1.png);
+    background-image: url(/files-layout/layout-desktop-nav-bg1.png);
     background-repeat: no-repeat;
     background-position: left top;
 }
-.ss-frontend-links-li01:first-child {
-  background-image: none;
+.ss-frontend-links-li01:nth-of-type(2) {
+    background-image: none;
 }
 
 .ss-frontend-links-li02 { /* no elements, one bellow the other */
@@ -1112,8 +1122,11 @@ button:focus {
     width: 99vw; 
     /* height: 705px; */
     
+    color: #ffffff !important;
+    
     background-color: #747474; 
     margin-top: 30px;
+    margin-bottom: 30px;
     padding-bottom: 60px;
     /* overflow: hidden; */ 
 }
@@ -1131,6 +1144,9 @@ button:focus {
   
   top: -37px;
   left: 0px;
+}
+.ss-frontend-layout-section-full-width01 p > * {
+  color: #ffffff;
 }
 @media(max-width: 991px) {
   .ss-frontend-layout-section-full-width01 {
@@ -1310,7 +1326,7 @@ button:focus {
 
     text-decoration: none;
 
-    background-image: url(../app_files_layout/frontend-layout-btn-top.png);
+    background-image: url(/files-layout/frontend-layout-btn-top.png);
     /*background-repeat: no-repeat;
     background-position: top left; */
     /*opacity: 0.3; */
@@ -1320,7 +1336,7 @@ button:focus {
 .ss-frontend-btn-top:hover {
     text-decoration: none;
 
-    background-image: url(../app_files_layout/frontend-layout-btn-top-a.png);
+    background-image: url(/files-layout/frontend-layout-btn-top-a.png);
 }
 
 .ss-frontend-btn-top-fixed {
@@ -1383,7 +1399,7 @@ button:focus {
     /* Usage */
     /* style={{['--btnGenericBG' as any]: 'url(img/image-name)'}} *//* React */
     /* style="--btnGenericBG: url(img/image-name);" *//* HTML */
-    /* style="--btnGenericBG: url(../app_files_layout/backend-layout-btn-bg1.png); --btnGenericBGHover: url(../app_files_layout/backend-layout-btn-bg1-a.png); --btnGenericColor: #3be0f4; --btnGenericColorHover: #0b3452;" *//* HTML */
+    /* style="--btnGenericBG: url(/files-layout/backend-layout-btn-bg1.png); --btnGenericBGHover: url(/files-layout/backend-layout-btn-bg1-a.png); --btnGenericColor: #3be0f4; --btnGenericColorHover: #0b3452;" *//* HTML */
 }
 .ss-frontend-btn-generic-bg01:hover {
     text-decoration: none;
@@ -1443,8 +1459,8 @@ button:focus {
   line-height: 60px;
   text-transform: uppercase; 
   
-  --btnGenericBG: url(../app_files_layout/layout-btn-bg1.png); 
-  --btnGenericBGHover: url(../app_files_layout/layout-btn-bg1.png); 
+  --btnGenericBG: url(/files-layout/layout-btn-bg1.png); 
+  --btnGenericBGHover: url(/files-layout/layout-btn-bg1.png); 
   --btnGenericColor: #ffffff; 
   --btnGenericColorHover: #000000; 
 }
@@ -1461,8 +1477,8 @@ button:focus {
     line-height: 50px;
     text-transform: uppercase; 
     
-    --btnGenericBG: url(../app_files_layout/layout-btn-mobile-bg1.png); 
-    --btnGenericBGHover: url(../app_files_layout/layout-btn-mobile-bg1.png); 
+    --btnGenericBG: url(/files-layout/layout-btn-mobile-bg1.png); 
+    --btnGenericBGHover: url(/files-layout/layout-btn-mobile-bg1.png); 
   }
 }
 
@@ -1529,7 +1545,7 @@ button:focus {
     margin: 0px auto 0px auto;
 
     /* Usage */
-    /* style="width: 960px; min-height: 600px; --infographicsGenericBG: url(../app_files_layout/frontend-desktop-home-bg1.png); */
+    /* style="width: 960px; min-height: 600px; --infographicsGenericBG: url(/files-layout/frontend-desktop-home-bg1.png); */
 }
 
 /* Effects. */
@@ -1962,7 +1978,7 @@ flex-wrap: wrap;
   .ss-frontend-categories-container {
     
     width: 150px;
-    height: 180px;
+    height: 195px;
 
     background-image: var(--categoriesListingMobileContainerBG);
     background-repeat: no-repeat;
@@ -2268,8 +2284,8 @@ flex-wrap: wrap;
     width: 77px;
     height: 77px;
 
-    background-color: #999999;
-    background-image: var(--ssFrontendCategoriesListingImageGB);
+    /* background-color: #999999; */
+    /* background-image: var(--ssFrontendCategoriesListingImageGB); */
     background-repeat: no-repeat;
     background-size: cover; /* cover | contain; */
     background-position: center center;
@@ -2359,7 +2375,11 @@ flex-wrap: wrap;
     overflow: hidden;
     clear: both;
 }
-
+@media(max-width: 991px) {
+  .ss-frontend-content-container {
+    margin: 0px 5px 0px 5px;
+  }
+}
 
 .ss-frontend-content-heading-title {
     /* position: relative;
@@ -2394,8 +2414,9 @@ flex-wrap: wrap;
     display: block; */
 
     font-family: var(--ssFrontendDefaultFont);
-    font-size: var(--ssFrontendDefaultFontSize);
-    line-height: 17px;
+    /* font-size: var(--ssFrontendDefaultFontSize); */
+    font-size: 16px;
+    line-height: 22px;
     font-weight: normal;
     color: #000000;
 
@@ -2405,6 +2426,8 @@ flex-wrap: wrap;
 @media(max-width: 991px)
 {
     .ss-frontend-content-text {
+        font-size: var(--ssFrontendDefaultFontSize);
+        line-height: 19px;
         hyphens: auto;
     }   
 }
@@ -2430,7 +2453,7 @@ flex-wrap: wrap;
     font-size: var(--ssFrontendDefaultFontSize);
     line-height: 17px;
     font-weight: normal;
-    color: #78c3ae;
+    color: #f98d21;
 
     word-wrap: break-word;
     word-break: break-all;
@@ -2440,7 +2463,7 @@ flex-wrap: wrap;
     font-size: var(--ssFrontendDefaultFontSize);
     line-height: 17px;
     font-weight: normal;
-    color: #ff0000;
+    color: #000000;
 }
 
 /* Images */
@@ -2478,6 +2501,12 @@ flex-wrap: wrap;
 }
 .ss-frontend-content-images-container-left > figcaption {
     width: 200px;
+}
+@media(max-width: 991px) {
+  .ss-frontend-content-images-container-left {
+      float: initial;
+      margin-bottom: 10px;
+  }
 }
 
 .ss-frontend-content-images-container-right {
@@ -5167,7 +5196,7 @@ flex-wrap: wrap;
 
     width: 100%;
     height: 525px; 
-    background-color: #999;
+    /* background-color: #999; */
 
     /* overflow: hidden; */
     z-index: 1;
@@ -5179,7 +5208,7 @@ flex-wrap: wrap;
     width: 100%;
     height: 475px; 
 
-    /* background-image: url(../app_files_layout/frontend-desktop-banner-bg1.png); 
+    /* background-image: url(/files-layout/frontend-desktop-banner-bg1.png); 
     background-repeat: no-repeat; 
     background-position: top center; */
 
@@ -5193,14 +5222,16 @@ flex-wrap: wrap;
     height: 100%; 
     
     margin: auto;
+    
+    z-index: 2;
 }
 .ss-frontend-banners-container-element > img {
     position: absolute; 
     display: block; 
     bottom: -1px; 
     right: -230px;
+    pointer-events: none;
 }
-
 
 .ss-frontend-banners-footer {
     position: relative; 
@@ -5212,7 +5243,7 @@ flex-wrap: wrap;
     line-height: 95px;
     
     background-color: #000000;
-    background-image: url(../app_files_layout/layout-desktop-banners-footer-bg1.jpg);
+    background-image: url(/files-layout/layout-desktop-banners-footer-bg1.jpg);
     background-repeat: no-repeat;
     background-position: center top;  
 }
@@ -5251,7 +5282,7 @@ flex-wrap: wrap;
       
       line-height: 50px;
       
-      background-image: url(../app_files_layout/layout-mobile-banners-footer-bg1.jpg);
+      background-image: url(/files-layout/layout-mobile-banners-footer-bg1.jpg);
   }  
   
   .ss-frontend-banners-footer > span {
@@ -5264,23 +5295,35 @@ flex-wrap: wrap;
 .ss-frontend-banners-generic-bg {
     position: absolute; 
     display: block; 
-    left: 50%; 
-    transform: translate(-50%, 0); 
-    top: 16px;
-    width: 100%;
-    height: 423px;
+    /*left: 50%; 
+    transform: translate(-50%, 0); */
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     
-    line-height: 26px;
+    /*width: 100%;
+    height: 423px;*/
+    
+    /*line-height: 26px;
     font-family: var(--ssFrontendDefaultFont);
     font-size: 20px;
     text-decoration: none;
-    color: #78c3ae;
+    color: #78c3ae;*/
+    
 
-    /* background-image: url(../app_files_layout/layout-frontend-home-banner1.png); */ 
+    /* background-image: url(/files-layout/layout-frontend-home-banner1.png); */ 
     background-image: var(--bannerGenericBG);
     background-repeat: no-repeat; 
     background-position: top center;
 }
+@media(max-width: 991px)
+{
+  .ss-frontend-banners-generic-bg {
+    background-image: var(--bannerMobileGenericBG);
+  }
+}
+/*
 .ss-frontend-banners-generic-bg:hover {
     color: #78c3ae;
     text-decoration: none;
@@ -5291,6 +5334,7 @@ flex-wrap: wrap;
 .ss-frontend-banners-generic-bg > span > strong {
     font-size: 30px;
 }
+*/
 /* ************************************************************************************** */
 
 
@@ -5446,7 +5490,7 @@ flex-wrap: wrap;
 }
 .ldio-4184arakpp2 > div > div:last-child > div > div {
   animation-delay: -0.8928571428571428s;
-  background: #78c3ae;
+  background: #f98d21;
 }
 .loadingio-spinner-interwind-zd49qx49xdb {
   width: 254px;
