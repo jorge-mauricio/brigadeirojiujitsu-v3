@@ -49,7 +49,7 @@ $configFrontendMobileDefaultView = "frontend_php_mobile";
 
 //DB especial configuration.
 //----------------------
-$configSystemDBTablePrefix = "prefix_ssmv1_";
+$configSystemDBTablePrefix = "bjj_";
 $configSystemDBType = 2; //2 - MySQL | 3 - SQL Server
 $enableSystemDBSizeOptimize = 0; //0-disable (all fields created) | 1-enable (only enabled fields created on database setup)
 

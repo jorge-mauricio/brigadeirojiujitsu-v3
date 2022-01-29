@@ -8,14 +8,14 @@ Notes:
 exports.appLabels = {
   // Config.
   // **************************************************************************************
-  configSiteTile: 'SyncSystem - Multiplatform (debug: çáéã)',
-  configSiteDescription: 'Description example.',
+  configSiteTile: 'Brigadeiro Jiu-Jitsu',
+  configSiteDescription: '',
   configSiteKeywords: 'keywords or key terms, separated by, commas',
 
   configFrontendLanguage: 'en_US', // en_US | pt_BR
 
   layoutSystemName: 'Content Management System', // Sistema de Gerenciamento de Conteúdo | Content Management System
-  layoutDevName: 'Planejamento Visual - Arte e Tecnologia', // Planejamento Visual - Arte e Tecnologia | Jorge Mauricio - Full Stack Web Developer | Full Stack Web Designer - JM - Jorge Mauricio
+  layoutDevName: 'Full Stack Web Designer - JM - Jorge Mauricio', // Planejamento Visual - Arte e Tecnologia | Jorge Mauricio - Full Stack Web Developer | Full Stack Web Designer - JM - Jorge Mauricio
   // **************************************************************************************
 
   // Layout.
@@ -646,7 +646,7 @@ exports.appLabels = {
   backendProductsNumberS4: 'Number Small 4',
   backendProductsNumberS5: 'Number Small 5',
 
-  backendProductsURL1: 'URL1',
+  backendProductsURL1: 'Payment Link',
   backendProductsURL2: 'URL2',
   backendProductsURL3: 'URL3',
   backendProductsURL4: 'URL4',
@@ -750,7 +750,7 @@ exports.appLabels = {
   backendPublicationsFile4: 'File 4',
   backendPublicationsFile5: 'File 5',
 
-  backendPublicationsActivation1: 'Activation 1',
+  backendPublicationsActivation1: 'Feature',
   backendPublicationsActivation2: 'Activation 2',
   backendPublicationsActivation3: 'Activation 3',
   backendPublicationsActivation4: 'Activation 4',
