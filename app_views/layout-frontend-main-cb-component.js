@@ -87,6 +87,7 @@ class LayoutFrontendMain extends Component {
     // Bind with method.
     // this.handleChange = this.handleChange.bind(this);
     this.setTitleCurrent = this.setTitleCurrent.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
   // **************************************************************************************
 
@@ -148,7 +149,15 @@ class LayoutFrontendMain extends Component {
     // TODO:
   }
 
+  handleScroll(e) {
+    const { FunctionsSyncSystem } = this.context;
+
+    FunctionsSyncSystem.elementShowByPosition('btnTopFixed', 'top', '50');
+  }
+
   componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+
     // Variables.
     // ----------------------
     const { gSystemConfig, SyncSystemNS, FunctionsSyncSystem, HTMLReactParser, Safe } = this.context;
@@ -252,6 +261,7 @@ class LayoutFrontendMain extends Component {
 
         <body className={/* StylesFrontend["ss-frontend-body01"]*/ 'ss-frontend-body01'}>
           <noscript>Please Enable JavaScript</noscript>
+          <a id="anchorTop"></a>
           <div id="root" className="ss-frontend-layout-container01">
             <header id="layoutHeader" className="ss-frontend-layout-header01">
               <div>
@@ -424,12 +434,12 @@ class LayoutFrontendMain extends Component {
                         </a>
                       </li>
                       <li className="ss-frontend-links-li02">
-                        <a href={'/' + gSystemConfig.configRouteFrontendContent + '/110/'} title="Register" className="ss-frontend-footer-links01">
+                        <a href={'/' + gSystemConfig.configRouteFrontendContent + '/109/?idTbForms=114'} title="Register" className="ss-frontend-footer-links01">
                           Register
                         </a>
                       </li>
                       <li className="ss-frontend-links-li02">
-                        <a href="#" title="Privacy Policy and Terms of Use" className="ss-frontend-footer-links01">
+                        <a href={'/' + gSystemConfig.configRouteFrontendContent + '/110/'} title="Privacy Policy and Terms of Use" className="ss-frontend-footer-links01">
                           Privacy Policy and Terms of Use
                         </a>
                       </li>
@@ -506,17 +516,17 @@ class LayoutFrontendMain extends Component {
             {`
               // Scroll listener.
               // Note: will not work if html / body height is set to 100% - use min/max-height.
-                document.addEventListener('scroll', (e) => {
+                // document.addEventListener('scroll', (e) => {
                   // Button back to top.
                   // elementShowByPosition('btnTopFixed', 'top', '50');
-                  FunctionsSyncSystem.elementShowByPosition('btnTopFixed', 'top', '50');
+                  // FunctionsSyncSystem.elementShowByPosition('btnTopFixed', 'top', '50');
     
     
                   // Debug.
                   // console.log('elementHeader', elementHeader);
                   // console.log('scrollValueRef', scrollValueRef);
                   // console.log('window.pageYOffset', window.pageYOffset);
-                });
+                // });
               `}
           </Safe.script>
 

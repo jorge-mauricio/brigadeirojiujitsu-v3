@@ -503,7 +503,7 @@ class FrontendContentListing extends Component {
           </FrontendContent>
 
           {/* Forms. */}
-          {this._idTbForms != '' ? <FrontendForms idTbForms={this._idTbForms} configLayoutType={22} configFormsSort={''}></FrontendForms> : ``}
+          {this._idTbForms != '' ? <FrontendForms idTbForms={this._idTbForms} configLayoutType={2} configFormsSort={''}></FrontendForms> : ``}
         </section>
       </React.Fragment>
     );

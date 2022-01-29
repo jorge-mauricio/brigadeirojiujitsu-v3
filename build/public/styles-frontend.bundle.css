@@ -445,7 +445,7 @@ button:focus {
     display: flex; 
     flex: 1; 
     align-items: stretch; 
-    max-width: 1015px; 
+    width: 1015px; 
 
     margin-left: auto; 
     margin-right: auto;
@@ -4099,7 +4099,7 @@ flex-wrap: wrap;
     font-family: var(--ssFrontendDefaultFont);
     font-size: var(--ssFrontendDefaultFontSize);
     text-decoration: none;
-    color: #78c3ae;
+    color: #f98d21;
 
     word-wrap: break-word;
     word-break: break-all;    
@@ -4365,10 +4365,15 @@ flex-wrap: wrap;
 
     overflow: hidden;
 }
+@media(max-width: 991px) {
+  .ss-frontend-forms-container {
+    width: 100%;
+  }
+}
 
 .ss-frontend-forms-title01 {
     position: relative;
-    display: block;
+    display: none;
 
     width: 100%;
     /* height: 30px; */
@@ -4377,7 +4382,7 @@ flex-wrap: wrap;
     font-size: var(--ssFrontendDefaultTitleFontSize);
     font-weight: bold;
     line-height: inherit;
-    color: #78c3ae;
+    color: #f98d21;
 
     border: 0px;
     /* border-bottom: 0px solid #78c3ae; */
@@ -4397,7 +4402,7 @@ flex-wrap: wrap;
     font-weight: bold;
     color: #000000;
 
-    text-align: right;
+    /* text-align: right; */
     
     margin-bottom: 0px; /* bootstrap adjustment */
 }
@@ -4416,7 +4421,7 @@ flex-wrap: wrap;
     font-family: var(--ssFrontendDefaultFont);
     font-size: var(--ssFrontendDefaultTitleFontSize);
     font-weight: bold;
-    color: #78c3ae;
+    color: #f98d21;
 
     /* margin: 0px; 
     padding: 0px;
@@ -4430,7 +4435,7 @@ flex-wrap: wrap;
     font-family: var(--ssFrontendDefaultFont);
     font-size: var(--ssFrontendDefaultSubheadingFontSize);
     font-weight: bold;
-    color: #78c3ae;
+    color: #f98d21;
 
     /* margin: 0px; 
     padding: 0px;
@@ -4464,10 +4469,10 @@ flex-wrap: wrap;
  */
 .ss-frontend-forms-row-label01 {
     position: relative;
-    /* display: block; */ /* stack */
-    display: inline-block; /* side by side */
+    display: block; /* stack */
+    /* display: inline-block; /* /* side by side */
 
-    width: 200px; /* side by side */
+    /* width: 200px; */ /* side by side */
 
     /* vertical-align: top; */
 
@@ -4475,10 +4480,10 @@ flex-wrap: wrap;
 }
 .ss-frontend-forms-row-field01 {
     position: relative;
-    /* display: block; */
-    display: inline-block; /* side by side */
+    display: block;
+    /* display: inline-block; */ /* side by side */
 
-    width: 595px; /* side by side */
+    /* width: 595px; */ /* side by side */
     /* width: 100%; */ /*stack */
 
     /* vertical-align: top; */
@@ -4495,7 +4500,7 @@ flex-wrap: wrap;
     color: #000000;
     background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #f98d21;
 }
 
 .ss-frontend-forms-field-text02 {
@@ -4508,7 +4513,7 @@ flex-wrap: wrap;
     color: #000000;
     background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #f98d21;
 }
 
 .ss-frontend-forms-field-file-upload {
@@ -4521,7 +4526,7 @@ flex-wrap: wrap;
     color: #000000;
     background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #f98d21;
 }
 
 .ss-frontend-forms-field-numeric {
@@ -4535,7 +4540,7 @@ flex-wrap: wrap;
     color: #000000;
     background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #f98d21;
 }
 
 .ss-frontend-forms-field-numeric01 {
@@ -4549,7 +4554,7 @@ flex-wrap: wrap;
     color: #000000;
     background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #f98d21;
 }
 
 .ss-frontend-forms-field-numeric02 {
@@ -4563,7 +4568,7 @@ flex-wrap: wrap;
     color: #000000;
     background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #f98d21;
 }
 
 .ss-frontend-forms-field-currency01 {
@@ -4577,7 +4582,7 @@ flex-wrap: wrap;
     color: #000000;
     background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #f98d21;
 }
 .ss-frontend-forms-field-text-area01 {
     width: 100%;
@@ -4589,7 +4594,7 @@ flex-wrap: wrap;
     color: #000000;
     background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #f98d21;
 }
 
 .ss-frontend-forms-field-date01 {
@@ -4602,7 +4607,7 @@ flex-wrap: wrap;
     color: #000000;
     background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #f98d21;
 }
 
 .ss-frontend-forms-field-tel01 {
@@ -4615,7 +4620,7 @@ flex-wrap: wrap;
     color: #000000;
     background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #f98d21;
 }
 .ss-frontend-forms-field-tel-ac01 {
     width: 30px;
@@ -4627,7 +4632,7 @@ flex-wrap: wrap;
     color: #000000;
     background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #f98d21;
 }
 
 .ss-frontend-forms-field-dropdown01 {
@@ -4642,7 +4647,7 @@ flex-wrap: wrap;
     color: #000000;
     background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #f98d21;
 }
 
 .ss-frontend-forms-field-listbox01 {
@@ -4656,7 +4661,7 @@ flex-wrap: wrap;
     color: #000000;
     background: #ffffff;
     
-    border: 1px solid #78c3ae;
+    border: 1px solid #f98d21;
 }
 
 .ss-frontend-forms-field-checkbox {
