@@ -50,8 +50,8 @@ gSystemConfig.configSystemClientState = '';
 gSystemConfig.configSystemClientCountry = '';
 gSystemConfig.configSystemClientZipCode = '';
 gSystemConfig.configSystemClientPhone = '';
-gSystemConfig.configSystemClientCel = '+1 999-222-3333';
-gSystemConfig.configSystemClientEmail = 'contact@domain.com';
+gSystemConfig.configSystemClientCel = '+ (904) 704-9877';
+gSystemConfig.configSystemClientEmail = 'contact@brigadeirojiujitsu.com';
 
 gSystemConfig.configSiteTitle = 'Brigadeiro Jiu-Jitsu - Brazilian Jiu-Jitsu'; // site name (Note: moved to language file)
 gSystemConfig.configSystemName = 'Content Management System'; // Sistema de Controle | Sistema Administrativo | CRM | Content Management System (Note: moved to language file)
@@ -59,15 +59,16 @@ gSystemConfig.configDevName = 'Full Stack Web Designer - JM - Jorge Mauricio'; /
 gSystemConfig.configDevSite = 'http://www.fullstackwebdesigner.com'; // http://www.programadorvisual.com.br | http://www.planejamentovisual.com.br | http://www.jorgemauricio.com | http://www.webinventor.com.br | http://www.fullstackwebdesigner.com
 gSystemConfig.configCopyrightYear = '2022';
 
-// gSystemConfig.configSystemURL = "http://localhost:3000"; // http://multiplatformv1.syncsystem.com.br
-gSystemConfig.configSystemURL = process.env.CONFIG_SYSTEM_URL; // http://multiplatformv1.syncsystem.com.br
+gSystemConfig.configSystemURL = 'http://backend.brigadeirojiujitsu.com'; // http://multiplatformv1.syncsystem.com.br
+// gSystemConfig.configSystemURL = process.env.CONFIG_SYSTEM_URL; // http://multiplatformv1.syncsystem.com.br
 // gSystemConfig.configSystemURL = window.location.origin; // http://multiplatformv1.syncsystem.com.br
-// gSystemConfig.configSystemURLSSL = "http://localhost:3000"; // http://multiplatformv1.syncsystem.com.br
-gSystemConfig.configSystemURLSSL = process.env.CONFIG_SYSTEM_URL_SSL; // http://multiplatformv1.syncsystem.com.br
+gSystemConfig.configSystemURLSSL = 'http://backend.brigadeirojiujitsu.com'; // http://multiplatformv1.syncsystem.com.br
+// gSystemConfig.configSystemURLSSL = process.env.CONFIG_SYSTEM_URL_SSL; // http://multiplatformv1.syncsystem.com.br
 // gSystemConfig.configSystemURLSSL = window.location.origin; // http://multiplatformv1.syncsystem.com.br
 
 gSystemConfig.configAPIURL = gSystemConfig.configSystemURLSSL; // process.env.CONFIG_API_URL;
-gSystemConfig.configURLFrontendReact = process.env.CONFIG_URL_FRONTEND_REACT;
+// gSystemConfig.configURLFrontendReact = process.env.CONFIG_URL_FRONTEND_REACT;
+gSystemConfig.configURLFrontendReact = 'http://www.brigadeirojiujitsu.com';
 
 /*
 window.location.hash: "#2"
